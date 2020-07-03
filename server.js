@@ -14,7 +14,7 @@ app.post('/assetExercise/api/files',(req,res)=>{
     }
     const name = req.body.name
     const content = req.body.content
-    fs.writeFile(`./files/${name}`,JSON.stringify(content),()=>{})   
+    fs.writeFile(`./files/${name}`,content,()=>{})   
 })
 app.get('/assetExercise/api/files',(req,res)=>{
     const filelist= []
